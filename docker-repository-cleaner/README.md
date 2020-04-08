@@ -6,7 +6,7 @@ This scripts removes images stored in a docker registry. It can remove images ba
 
 This script was used against a private repository installed using the `yum docker-distribution` package.
 
-`jq` tool
+`jq` tool -> https://stedolan.github.io/jq/download/
 
 ## Usage
 
