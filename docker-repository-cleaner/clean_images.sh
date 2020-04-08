@@ -47,8 +47,7 @@ delete_by_timeframe() {
 get_tag_date () {
     TAG="$1"
     IMAGE_DATE=$(curl -s -H "Accept: application/vnd.docker.distribution.manifest.v1+json" -X GET $REGISTRY/v2/$REPO/manifests/$TAG 2>&1 | jq -r '.history[].v1Compatibility' | jq -r '.created' | sort | tail -n1)
-
-
+    
     date -d "$IMAGE_DATE" +%s
 }
 
